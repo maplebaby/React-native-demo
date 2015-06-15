@@ -1,0 +1,32 @@
+<View>
+  <SegmentedControlIOS style={styles.fixTop} values={['公示中', '待售中']} />
+
+  <View style={styles.container}>
+    <View style={styles.detailWrap}>
+      <View style={styles.imgWrap}>
+        <Image source={{uri: this._getLargeImage(item.goods.largeImage)}} style={styles.thumbnail} />
+      </View>
+      <View style={styles.infoWrap}>
+        <Text style={styles.roleName}>[{item.goods.title}] {item.goods.goodsName}</Text>
+        <Text style={styles.attrKey}>
+          商品编号：<Text style={styles.attrValue}>{item.goods.goodsCode}</Text>
+        </Text>
+        <Text style={styles.attrKey}>
+          区       服：<Text style={styles.attrValue}>电信四区—潘多拉/超梦幻/莲花灯</Text>
+        </Text>
+        <Text style={styles.attrKey}>
+          销售状态：<Text style={styles.attrValue}>待售中</Text>
+        </Text>
+
+        <View style={styles.block}>
+          <Text style={styles.attrKey}>
+            价格：<Text style={styles.attrValue}>{item.goods.price}</Text>
+          </Text>
+          <TouchableHighlight style={styles.btn} onPress={() => {}} underlayColor={"#F2F2F2"}>
+            <Text style={styles.btnText}>立即购买</Text>
+          </TouchableHighlight>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
